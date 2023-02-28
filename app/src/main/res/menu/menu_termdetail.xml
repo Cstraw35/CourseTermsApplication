@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/notifyTermStart"
+        android:title="Notify Term Start"/>
+    <item
+        android:id="@+id/notifyTermEnd"
+        android:title="Notify Term End"/>
+
+
+
+    <item
+        android:id="@+id/deleteTerm"
+        android:title="Delete Term"/>
+</menu>

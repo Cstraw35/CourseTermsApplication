@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Course Terms Application</string>
+    <string-array name="course_status">
+        <item> in progress</item>
+        <item> completed</item>
+        <item> dropped</item>
+        <item> plan to take</item>
+    </string-array>
+    <string-array name="Assessment_Types">
+        <item> Performance</item>
+        <item> Objective</item>
+    </string-array>
+    <string name="share">Share</string>
+    <string name="notify_start">Notify Start</string>
+    <string name="notify_end">Notify End</string>
+    <string name="channel_name">TermChannel</string>
+    <string name="channel_description">Notifications for Course Terms App</string>
+
+</resources>

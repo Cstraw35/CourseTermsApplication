@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.CourseDetails">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textview4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="124dp"
+                    android:text="Instructor Phone"
+                    app:layout_constraintStart_toEndOf="@+id/textview2"
+                    app:layout_constraintTop_toBottomOf="@+id/courseEndDate" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="138dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Assessments"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/courseSaveButton" />
+
+                <TextView
+                    android:id="@+id/textview6"
+                    android:layout_width="104dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Note(Optional)"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/instructorEmail" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/assessmentRecyclerView"
+                    android:layout_width="406dp"
+                    android:layout_height="128dp"
+                    android:layout_marginTop="5dp"
+                    android:clickable="false"
+                    android:clipChildren="false"
+                    android:isScrollContainer="false"
+
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12"
+                    tools:layout_editor_absoluteX="4dp" />
+
+                <EditText
+                    android:id="@+id/optionalNote"
+                    android:layout_width="280dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Enter note"
+                    android:inputType="textMultiLine"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview6" />
+
+                <EditText
+                    android:id="@+id/courseEndDate"
+                    android:layout_width="122dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:editable="false"
+                    android:ems="10"
+                    android:hint="MM/DD/YYYY"
+                    android:inputType="date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="End Date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/courseStartDate" />
+
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="58dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="140dp"
+                    android:text="Status"
+                    app:layout_constraintStart_toEndOf="@+id/textview11"
+                    tools:layout_editor_absoluteY="4dp" />
+
+                <Button
+                    android:id="@+id/courseSaveButton"
+                    android:layout_width="96dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Save"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/optionalNote" />
+
+                <TextView
+                    android:id="@+id/textview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Instructor Name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/courseEndDate" />
+
+                <Button
+                    android:id="@+id/courseStartDateButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="104dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="5dp"
+                    android:background="#3FB324"
+                    android:text="Select Date"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toEndOf="@+id/courseStartDate"
+                    app:layout_constraintTop_toTopOf="@+id/courseStartDate"
+                    app:rippleColor="#D80404"
+                    app:strokeColor="#F3EDED" />
+
+                <EditText
+                    android:id="@+id/instructorEmail"
+                    android:layout_width="210dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+
+                    android:hint="Instructor Email"
+                    android:inputType="textEmailAddress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview5" />
+
+                <EditText
+                    android:id="@+id/instructorPhone"
+                    android:layout_width="157dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Instructor Phone"
+                    android:inputType="phone"
+                    app:layout_constraintStart_toStartOf="@+id/textview4"
+                    app:layout_constraintTop_toBottomOf="@+id/textview4" />
+
+                <EditText
+                    android:id="@+id/courseStartDate"
+                    android:layout_width="121dp"
+                    android:layout_height="39dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:editable="true"
+                    android:ems="10"
+                    android:hint="MM/DD/YYYY"
+                    android:inputType="date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Start Date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/courseName" />
+
+                <EditText
+                    android:id="@+id/instructorName"
+                    android:layout_width="176dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Instructor Name"
+                    android:inputType="text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview2" />
+
+                <EditText
+                    android:id="@+id/courseName"
+                    android:layout_width="177dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="5dp"
+                    android:hint="Course Name"
+                    android:inputType="text"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview11" />
+
+                <Button
+                    android:id="@+id/courseEndDateButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="104dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="5dp"
+                    android:background="#3FB324"
+                    android:text="Select Date"
+                    android:textSize="8sp"
+                    app:layout_constraintStart_toEndOf="@+id/courseEndDate"
+                    app:layout_constraintTop_toTopOf="@+id/courseEndDate"
+                    app:rippleColor="#D80404"
+                    app:strokeColor="#F3EDED" />
+
+                <TextView
+                    android:id="@+id/textview11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Course Name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/coursestatusspinner"
+                    android:layout_width="186dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="@+id/textview"
+                    app:layout_constraintTop_toBottomOf="@+id/textview" />
+
+                <TextView
+                    android:id="@+id/textview5"
+                    android:layout_width="104dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Instructor Email"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/instructorName" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addAssessmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
